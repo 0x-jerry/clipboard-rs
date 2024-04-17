@@ -64,7 +64,7 @@
     "version": "napi version",
     "release": "x-release"
   },
-  "x-release": {
+  "release": {
     "sequence": [
       "pkg.update.version",
       "git.commit",
