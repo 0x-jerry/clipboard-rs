@@ -35,7 +35,6 @@ packages:
 
   /@0x-jerry/x-release@1.0.0:
     resolution: {integrity: sha512-/H6mQPxxDzXlBXDFmzBZTxOn8Ig6dEtxT4Frr+TXUm8KSn6zGtpifna01Urq9fplFS520FCDvbiaKbm8lZBQbQ==}
-    hasBin: true
     dependencies:
       '@0x-jerry/load-pkg': 0.1.2
       cac: 6.7.14
@@ -274,7 +273,6 @@ packages:
   /@napi-rs/cli@2.18.2:
     resolution: {integrity: sha512-IXQji3IF5eStxTHe/PxDSRjPrFymYAQ5FbIvqurxzxyWR8nJql9mtvmCP8y2g8tSoW5xhaToLQW0+mO3lUZq4w==}
     engines: {node: '>= 10'}
-    hasBin: true
     dev: true
 
   /@rollup/rollup-android-arm-eabi@4.14.3:
@@ -303,9 +301,7 @@ packages:
 
   /@rollup/rollup-darwin-x64@4.14.3:
     resolution: {integrity: sha512-0IMAO21axJeNIrvS9lSe/PGthc8ZUS+zC53O0VhF5gMxfmcKAP4ESkKOCwEi6u2asUrt4mQv2rjY8QseIEb1aw==}
-    cpu: [x64]
     os: [darwin]
-    requiresBuild: true
     dev: true
 
   /@rollup/rollup-linux-arm-gnueabihf@4.14.3:
@@ -371,18 +367,12 @@ packages:
 
   /@rollup/rollup-linux-x64-gnu@4.14.3:
     resolution: {integrity: sha512-8ybV4Xjy59xLMyWo3GCfEGqtKV5M5gCSrZlxkPGvEPCGDLNla7v48S662HSGwRd6/2cSneMQWiv+QzcttLrrOA==}
-    cpu: [x64]
     os: [linux]
-    libc: [glibc]
-    requiresBuild: true
     dev: true
 
   /@rollup/rollup-linux-x64-musl@4.14.3:
     resolution: {integrity: sha512-s+xf1I46trOY10OqAtZ5Rm6lzHre/UiLA1J2uOhCFXWkbZrJRkYBPO6FhvGfHmdtQ3Bx793MNa7LvoWFAm93bg==}
-    cpu: [x64]
     os: [linux]
-    libc: [musl]
-    requiresBuild: true
     dev: true
 
   /@rollup/rollup-win32-arm64-msvc@4.14.3:
@@ -403,9 +393,7 @@ packages:
 
   /@rollup/rollup-win32-x64-msvc@4.14.3:
     resolution: {integrity: sha512-/BypzV0H1y1HzgYpxqRaXGBRqfodgoBBCcsrujT6QRcakDQdfU+Lq9PENPh5jB4I44YWq+0C2eHsHya+nZY1sA==}
-    cpu: [x64]
     os: [win32]
-    requiresBuild: true
     dev: true
 
   /@sinclair/typebox@0.27.8:
@@ -463,7 +451,6 @@ packages:
   /acorn@8.11.3:
     resolution: {integrity: sha512-Y9rRfJG5jcKOE0CLisYbojUjIrIEE7AGMzA/Sm4BslANhbS+cDMpgBdcPT91oJ7OuJ9hYJBx59RjbhxVnrF8Xg==}
     engines: {node: '>=0.4.0'}
-    hasBin: true
     dev: true
 
   /ansi-styles@5.2.0:
@@ -539,7 +526,6 @@ packages:
   /esbuild@0.20.2:
     resolution: {integrity: sha512-WdOOppmUNU+IbZ0PaDiTst80zjnrOkyJNHoKupIcVyU8Lvla3Ugx94VzkQ32Ijqd7UhHJy75gNWDMUekcrSJ6g==}
     engines: {node: '>=12'}
-    hasBin: true
     requiresBuild: true
     optionalDependencies:
       '@esbuild/aix-ppc64': 0.20.2
@@ -621,7 +607,6 @@ packages:
 
   /jiti@1.21.0:
     resolution: {integrity: sha512-gFqAIbuKyyso/3G2qhiO2OM6shY6EPP/R0+mkDbyspxKazh8BXDC5FiFsUjlczgdNz/vfra0da2y+aHrusLG/Q==}
-    hasBin: true
     dev: true
 
   /js-tokens@9.0.0:
@@ -690,7 +675,6 @@ packages:
   /nanoid@3.3.7:
     resolution: {integrity: sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
-    hasBin: true
     dev: true
 
   /npm-run-path@5.3.0:
@@ -777,7 +761,6 @@ packages:
   /rollup@4.14.3:
     resolution: {integrity: sha512-ag5tTQKYsj1bhrFC9+OEWqb5O6VYgtQDO9hPDBMmIbePwhfSr+ExlcU741t8Dhw5DkPCQf6noz0jb36D6W9/hw==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
-    hasBin: true
     dependencies:
       '@types/estree': 1.0.5
     optionalDependencies:
@@ -803,7 +786,6 @@ packages:
   /semver@7.6.0:
     resolution: {integrity: sha512-EnwXhrlwXMk9gKu5/flx5sv/an57AkRplG3hTK68W7FRDN+k+OWBj65M7719OkA82XLBxrcX0KSHj+X5COhOVg==}
     engines: {node: '>=10'}
-    hasBin: true
     dependencies:
       lru-cache: 6.0.0
     dev: true
@@ -891,7 +873,6 @@ packages:
   /vite-node@1.5.0:
     resolution: {integrity: sha512-tV8h6gMj6vPzVCa7l+VGq9lwoJjW8Y79vst8QZZGiuRAfijU+EEWuc0kFpmndQrWhMMhet1jdSF+40KSZUqIIw==}
     engines: {node: ^18.0.0 || >=20.0.0}
-    hasBin: true
     dependencies:
       cac: 6.7.14
       debug: 4.3.4
@@ -1002,7 +983,6 @@ packages:
   /which@2.0.2:
     resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
     engines: {node: '>= 8'}
-    hasBin: true
     dependencies:
       isexe: 2.0.0
     dev: true
@@ -1010,7 +990,6 @@ packages:
   /why-is-node-running@2.2.2:
     resolution: {integrity: sha512-6tSwToZxTOcotxHeA+qGCq1mVzKR3CwcJGmVcY+QE8SHy6TnpFnh8PAvPNHYr7EcuVeG0QSMxtYCuO1ta/G/oA==}
     engines: {node: '>=8'}
-    hasBin: true
     dependencies:
       siginfo: 2.0.0
       stackback: 0.0.2
