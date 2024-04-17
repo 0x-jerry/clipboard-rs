@@ -13,8 +13,8 @@
   },
   "scripts": {
     "artifacts": "napi artifacts",
-    "build": "napi build --platform --release",
-    "build:debug": "napi build --platform",
+    "build": "napi build --js binding.cjs --platform --release",
+    "build:debug": "napi build --js binding.cjs --platform",
     "prepublishOnly": "napi prepublish -t npm",
     "test": "vitest run",
     "universal": "napi universal",

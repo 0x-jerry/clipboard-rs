@@ -1,4 +1,4 @@
-import { readText, readFiles, readImage, writeText } from '../index'
+import { readText, readFiles, readImage, writeText } from '..'
 
 describe('clipboard-rs', () => {
   it('write 123 clipboard, then read 123 from clipboard', () => {
