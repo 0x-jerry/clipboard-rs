@@ -1,6 +1,11 @@
 {
   "name": "clipboard-rs-linux-arm-musleabihf",
-  "version": "0.0.0",
+  "version": "0.0.6",
+  "author": "Jerry Wang <x.jerry.wang@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0x-jerry/clipboard-rs.git"
+  },
   "os": [
     "linux"
   ],

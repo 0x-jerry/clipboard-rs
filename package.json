@@ -4,6 +4,23 @@
   "main": "index.js",
   "types": "index.d.ts",
   "type": "module",
+  "description": "Node binding for rust [clipboard-rs] lib, powered by [napi-rs].",
+  "keywords": [],
+  "author": "Jerry Wang <x.jerry.wang@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0x-jerry/clipboard-rs.git"
+  },
+  "scripts": {
+    "artifacts": "napi artifacts",
+    "build": "napi build --platform --release",
+    "build:debug": "napi build --platform",
+    "prepublishOnly": "napi prepublish -t npm",
+    "test": "vitest run",
+    "universal": "napi universal",
+    "version": "napi version",
+    "release": "x-release"
+  },
   "napi": {
     "name": "clipboard-rs",
     "triples": {
@@ -51,22 +68,28 @@
       ]
     }
   },
-  "scripts": {
-    "artifacts": "napi artifacts",
-    "build": "napi build --platform --release",
-    "build:debug": "napi build --platform",
-    "prepublishOnly": "napi prepublish -t npm",
-    "test": "vitest run",
-    "universal": "napi universal",
-    "version": "napi version",
-    "release": "x-release"
-  },
   "release": {
     "sequence": [
       "pkg.update.version",
+      "npm:prepublishOnly",
       "git.commit",
       "git.tag",
       "git.push"
     ]
+  },
+  "optionalDependencies": {
+    "clipboard-rs-win32-x64-msvc": "0.0.6",
+    "clipboard-rs-darwin-x64": "0.0.6",
+    "clipboard-rs-linux-x64-gnu": "0.0.6",
+    "clipboard-rs-darwin-arm64": "0.0.6",
+    "clipboard-rs-linux-arm64-gnu": "0.0.6",
+    "clipboard-rs-linux-arm64-musl": "0.0.6",
+    "clipboard-rs-win32-arm64-msvc": "0.0.6",
+    "clipboard-rs-linux-arm-gnueabihf": "0.0.6",
+    "clipboard-rs-linux-arm-musleabihf": "0.0.6",
+    "clipboard-rs-linux-x64-musl": "0.0.6",
+    "clipboard-rs-win32-ia32-msvc": "0.0.6",
+    "clipboard-rs-darwin-universal": "0.0.6",
+    "clipboard-rs-linux-riscv64-gnu": "0.0.6"
   }
 }

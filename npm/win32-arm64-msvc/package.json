@@ -1,6 +1,11 @@
 {
   "name": "clipboard-rs-win32-arm64-msvc",
-  "version": "0.0.0",
+  "version": "0.0.6",
+  "author": "Jerry Wang <x.jerry.wang@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0x-jerry/clipboard-rs.git"
+  },
   "os": [
     "win32"
   ],
