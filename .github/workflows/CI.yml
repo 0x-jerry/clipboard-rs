@@ -86,16 +86,15 @@ jobs:
     runs-on: ${{ matrix.settings.host }}
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 8
       - name: Setup node
         uses: actions/setup-node@v4
         if: ${{ !matrix.settings.docker }}
         with:
           node-version: 20
           cache: pnpm
-      - uses: pnpm/action-setup@v3
-        if: ${{ !matrix.settings.docker }}
-        with:
-          version: 8
       - name: Install
         uses: dtolnay/rust-toolchain@stable
         if: ${{ !matrix.settings.docker }}
@@ -124,9 +123,6 @@ jobs:
         if: matrix.settings.target == 'i686-pc-windows-msvc'
         run: npm config set supportedArchitectures.cpu "ia32"
         shell: bash
-      - uses: pnpm/action-setup@v3
-        with:
-          version: 8
       - name: Install dependencies
         run: pnpm install
       - name: Setup node x86
@@ -218,14 +214,14 @@ jobs:
     runs-on: ${{ matrix.settings.host }}
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 8
       - name: Setup node
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
           cache: pnpm
-      - uses: pnpm/action-setup@v3
-        with:
-          version: 8
       - name: Install dependencies
         run: pnpm install
       - name: Download artifacts
@@ -251,14 +247,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 8
       - name: Setup node
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
           cache: pnpm
-      - uses: pnpm/action-setup@v3
-        with:
-          version: 8
       - name: Install dependencies
         run: pnpm install
       - name: Download artifacts
@@ -431,14 +427,14 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 8
       - name: Setup node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: pnpm
-      - uses: pnpm/action-setup@v3
-        with:
-          version: 8
       - name: Install dependencies
         run: pnpm install
       - name: Download macOS x64 artifact
