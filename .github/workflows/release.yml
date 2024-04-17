@@ -1,5 +1,10 @@
 name: Release
 
+env:
+  DEBUG: napi:*
+  APP_NAME: clipboard-rs
+  MACOSX_DEPLOYMENT_TARGET: '10.13'
+
 on:
   push:
     tags:
@@ -7,6 +12,7 @@ on:
 
 permissions:
   contents: write
+  # used for npm provenance
   id-token: write
 
 jobs:
@@ -29,11 +35,48 @@ jobs:
   test:
     uses: 0x-jerry/clipboard-rs/.github/workflows/test.yml@main
 
+  universal-macOS:
+    name: Build universal macOS binary
+    needs:
+      - test
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 8
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install
+      - name: Download macOS x64 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: bindings-x86_64-apple-darwin
+          path: artifacts
+      - name: Download macOS arm64 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: bindings-aarch64-apple-darwin
+          path: artifacts
+      - name: Combine binaries
+        run: yarn universal
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: bindings-universal-apple-darwin
+          path: ${{ env.APP_NAME }}.*.node
+          if-no-files-found: error
+
   publish:
     name: Publish
     runs-on: ubuntu-latest
     needs:
       - test
+      - universal-macOS
     environment: NPM_PUBLISH
     steps:
       - uses: actions/checkout@v4
