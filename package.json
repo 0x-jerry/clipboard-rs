@@ -32,6 +32,12 @@
   "engines": {
     "node": ">= 10"
   },
+  "pnpm": {
+    "supportedArchitectures": {
+      "cpu": ["ia32", "arm64", "arm"],
+      "libc": ["musl", "glibc"]
+    }
+  },
   "scripts": {
     "artifacts": "napi artifacts",
     "build": "napi build --platform --release",
