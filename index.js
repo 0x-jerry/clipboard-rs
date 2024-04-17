@@ -310,6 +310,11 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { sum } = nativeBinding
+const { readText, readFiles, readImage, writeText, writeFiles, writeImage } = nativeBinding
 
-module.exports.sum = sum
+module.exports.readText = readText
+module.exports.readFiles = readFiles
+module.exports.readImage = readImage
+module.exports.writeText = writeText
+module.exports.writeFiles = writeFiles
+module.exports.writeImage = writeImage
