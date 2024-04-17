@@ -17,7 +17,14 @@ pnpm i clipboard-rs
 ## Usage
 
 ```ts
-import { readText, readFiles, readImage, writeText, writeImage, writeFiles } from 'clipboard-rs'
+import {
+  readText,
+  readFiles,
+  readImage,
+  writeText,
+  writeImage,
+  writeFiles
+} from 'clipboard-rs'
 
 const text = readText() // => string | null
 const imageBuffer = readImage() // => Buffer | null
@@ -28,6 +35,10 @@ writeText('text content') // => true | null
 writeImage(buf) // => true | null
 writeFiles([path]) // => true | null
 ```
+
+## Supported platforms
+
+Please check [clipboard-rs].
 
 [clipboard-rs]: https://github.com/ChurchTao/clipboard-rs
 [napi-rs]: https://github.com/napi-rs/napi-rs
