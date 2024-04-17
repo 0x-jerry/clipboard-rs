@@ -1,7 +1,9 @@
-import { sum } from '../index'
+import { readText, readFiles, readImage, writeText } from '../index'
 
-describe('sum', () => {
-  it('should work', () => {
-    expect(sum(1,2)).toBe(3)
+describe('clipboard-rs', () => {
+  it('write 123 clipboard, then read 123 from clipboard', () => {
+    expect(writeText('123')).toBe(true)
+
+    expect(readText()).toBe('123')
   })
 })
