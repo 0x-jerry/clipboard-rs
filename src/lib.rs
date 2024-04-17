@@ -45,7 +45,7 @@ pub fn read_image() -> Option<Buffer> {
 pub fn write_text(text: String) -> Option<bool> {
   let ctx = ClipboardContext::new().ok()?;
 
-  let _r = ctx.set_text(text).ok();
+  let _ = ctx.set_text(text).ok();
 
   Some(true)
 }
@@ -54,7 +54,7 @@ pub fn write_text(text: String) -> Option<bool> {
 pub fn write_files(files: Vec<String>) -> Option<bool> {
   let ctx = ClipboardContext::new().ok()?;
 
-  let _r = ctx.set_files(files).ok();
+  let _ = ctx.set_files(files).ok();
 
   Some(true)
 }
@@ -65,7 +65,21 @@ pub fn write_image(img: Buffer) -> Option<bool> {
 
   let image_data = RustImageData::from_bytes(&img.to_vec()).ok()?;
 
-  let img = ctx.set_image(image_data);
+  let _ = ctx.set_image(image_data).ok();
 
-  Some(img.is_ok())
+  Some(true)
+}
+
+#[cfg(test)]
+mod test {
+  use crate::{read_text, write_text};
+
+  #[test]
+  fn read_and_write_str() {
+    let result = write_text(("123").to_string());
+    assert_eq!(result, Some(true));
+
+    let t = read_text();
+    assert_eq!(t, Some("123".to_string()));
+  }
 }
