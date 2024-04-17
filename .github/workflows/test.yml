@@ -1,4 +1,4 @@
-name: CI
+name: Test
 env:
   DEBUG: napi:*
   APP_NAME: clipboard-rs
