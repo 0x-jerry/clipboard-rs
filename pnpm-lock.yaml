@@ -8,6 +8,15 @@ devDependencies:
   '@napi-rs/cli':
     specifier: ^2.18.2
     version: 2.18.2
+  '@rollup/rollup-darwin-x64':
+    specifier: ^4.14.3
+    version: 4.14.3
+  '@rollup/rollup-linux-x64-gnu':
+    specifier: ^4.14.3
+    version: 4.14.3
+  '@rollup/rollup-win32-x64-msvc':
+    specifier: ^4.14.3
+    version: 4.14.3
   vitest:
     specifier: ^1.5.0
     version: 1.5.0
@@ -268,7 +277,6 @@ packages:
     os: [darwin]
     requiresBuild: true
     dev: true
-    optional: true
 
   /@rollup/rollup-linux-arm-gnueabihf@4.14.3:
     resolution: {integrity: sha512-ge2DC7tHRHa3caVEoSbPRJpq7azhG+xYsd6u2MEnJ6XzPSzQsTKyXvh6iWjXRf7Rt9ykIUWHtl0Uz3T6yXPpKw==}
@@ -338,7 +346,6 @@ packages:
     libc: [glibc]
     requiresBuild: true
     dev: true
-    optional: true
 
   /@rollup/rollup-linux-x64-musl@4.14.3:
     resolution: {integrity: sha512-s+xf1I46trOY10OqAtZ5Rm6lzHre/UiLA1J2uOhCFXWkbZrJRkYBPO6FhvGfHmdtQ3Bx793MNa7LvoWFAm93bg==}
@@ -371,7 +378,6 @@ packages:
     os: [win32]
     requiresBuild: true
     dev: true
-    optional: true
 
   /@sinclair/typebox@0.27.8:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
