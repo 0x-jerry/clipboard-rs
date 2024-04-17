@@ -28,7 +28,6 @@ jobs:
 
   test-macOS-windows-binding:
     name: Test bindings on ${{ matrix.settings.target }} - node@${{ matrix.node }}
-    if: ${{ false }}
     needs:
       - build
     strategy:
