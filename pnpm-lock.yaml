@@ -10,7 +10,7 @@ devDependencies:
     version: 1.0.0
   '@napi-rs/cli':
     specifier: ^2.18.2
-    version: 2.18.2
+    version: 2.18.3
   '@rollup/rollup-darwin-x64':
     specifier: ^4.14.3
     version: 4.14.3
@@ -270,9 +270,10 @@ packages:
     resolution: {integrity: sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==}
     dev: true
 
-  /@napi-rs/cli@2.18.2:
-    resolution: {integrity: sha512-IXQji3IF5eStxTHe/PxDSRjPrFymYAQ5FbIvqurxzxyWR8nJql9mtvmCP8y2g8tSoW5xhaToLQW0+mO3lUZq4w==}
+  /@napi-rs/cli@2.18.3:
+    resolution: {integrity: sha512-L0f4kP0dyG8W5Qtc7MtP73VvLLrOLyRcUEBzknIfu8Jk4Jfhrsx1ItMHgyalYqMSslWdY3ojEfAaU5sx1VyeQQ==}
     engines: {node: '>= 10'}
+    hasBin: true
     dev: true
 
   /@rollup/rollup-android-arm-eabi@4.14.3:
