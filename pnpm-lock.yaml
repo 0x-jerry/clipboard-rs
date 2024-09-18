@@ -16,7 +16,7 @@ devDependencies:
     version: 4.14.3
   '@rollup/rollup-linux-x64-gnu':
     specifier: ^4.14.3
-    version: 4.14.3
+    version: 4.21.3
   '@rollup/rollup-linux-x64-musl':
     specifier: ^4.14.3
     version: 4.14.3
@@ -396,6 +396,15 @@ packages:
 
   /@rollup/rollup-linux-x64-gnu@4.14.3:
     resolution: {integrity: sha512-8ybV4Xjy59xLMyWo3GCfEGqtKV5M5gCSrZlxkPGvEPCGDLNla7v48S662HSGwRd6/2cSneMQWiv+QzcttLrrOA==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@rollup/rollup-linux-x64-gnu@4.21.3:
+    resolution: {integrity: sha512-kZPbX/NOPh0vhS5sI+dR8L1bU2cSO9FgxwM8r7wHzGydzfSjLRCFAT87GR5U9scj2rhzN3JPYVC7NoBbl4FZ0g==}
+    cpu: [x64]
     os: [linux]
     dev: true
 
