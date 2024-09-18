@@ -22,7 +22,7 @@ devDependencies:
     version: 4.21.3
   '@rollup/rollup-win32-x64-msvc':
     specifier: ^4.14.3
-    version: 4.14.3
+    version: 4.21.3
   vitest:
     specifier: ^2.0.0
     version: 2.1.1
@@ -433,6 +433,15 @@ packages:
 
   /@rollup/rollup-win32-x64-msvc@4.14.3:
     resolution: {integrity: sha512-/BypzV0H1y1HzgYpxqRaXGBRqfodgoBBCcsrujT6QRcakDQdfU+Lq9PENPh5jB4I44YWq+0C2eHsHya+nZY1sA==}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@rollup/rollup-win32-x64-msvc@4.21.3:
+    resolution: {integrity: sha512-fOvu7PCQjAj4eWDEuD8Xz5gpzFqXzGlxHZozHP4b9Jxv9APtdxL6STqztDzMLuRXEc4UpXGGhx029Xgm91QBeA==}
+    cpu: [x64]
     os: [win32]
     dev: true
 
