@@ -47,7 +47,7 @@ jobs:
     runs-on: ${{ matrix.settings.host }}
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v3
+      - uses: pnpm/action-setup@v4
         with:
           version: 8
       - name: Setup node
@@ -82,7 +82,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v3
+      - uses: pnpm/action-setup@v4
         with:
           version: 8
       - name: Setup node
@@ -117,7 +117,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v3
+      - uses: pnpm/action-setup@v4
         with:
           version: 8
       - name: Setup node
@@ -161,7 +161,7 @@ jobs:
       - name: List packages
         run: ls -R .
         shell: bash
-      - uses: pnpm/action-setup@v3
+      - uses: pnpm/action-setup@v4
         with:
           version: 8
       - name: Install dependencies
@@ -198,7 +198,7 @@ jobs:
       - name: List packages
         run: ls -R .
         shell: bash
-      - uses: pnpm/action-setup@v3
+      - uses: pnpm/action-setup@v4
         with:
           version: 8
       - name: Install dependencies
@@ -240,7 +240,7 @@ jobs:
       - name: List packages
         run: ls -R .
         shell: bash
-      - uses: pnpm/action-setup@v3
+      - uses: pnpm/action-setup@v4
         with:
           version: 8
       - name: Install dependencies
