@@ -40,7 +40,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@0x-jerry/x-release": "^1.0.0",
+    "@0x-jerry/x-release": "^2.0.0",
     "@napi-rs/cli": "^2.18.2",
     "@rollup/rollup-darwin-x64": "^4.14.3",
     "@rollup/rollup-linux-x64-gnu": "^4.14.3",
